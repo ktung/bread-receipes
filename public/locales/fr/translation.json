@@ -12,5 +12,8 @@
   "activeDryYeast": "Levure sèche",
   "oliveOil": "Huile d'olive",
   "meltedButter": "Beurre fondu",
-  "butter": "Beurre"
+  "butter": "Beurre",
+  "100-pizza-dough.notes": [
+    "1 pâton = 270g"
+  ]
 }

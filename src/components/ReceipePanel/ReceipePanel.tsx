@@ -106,7 +106,7 @@ export function ReceipePanel() {
       </form>
 
       <ReceipeLink link={receipeJSON.link}></ReceipeLink>
-      <NotesList notes={receipeJSON.notes}></NotesList>
+      <NotesList receipeFilename={receipeFilename}></NotesList>
     </div>
   );
 }

@@ -6,20 +6,21 @@ interface NotesList {
 }
 
 interface NotesListProps {
-  notes: NotesList;
+  receipeFilename: string;
 }
 
 export function NotesList(props: NotesListProps) {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
-  if (!props.notes) {
+  if (!props.receipeFilename) {
     return null;
   }
 
-  let notes: Array<string> = [];
-  if (!!props.notes.fr) {
-    notes = props.notes.fr;
-  } else {
+  const notes: string[] = i18n.t(`${props.receipeFilename}.notes`, {
+    returnObjects: true,
+  });
+
+  if (!Array.isArray(notes)) {
     return null;
   }
 
